@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gandimuggwe Pork Master</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        nav a {
+            margin: 10px;
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+        section {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .active {
+            display: block;
+        }
+        button {
+            margin-top: 5px;
+            padding: 8px 12px;
+            background: #008b35;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            background: #fafafa;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+<header>
+    <h1>Gandimuggwe bar and Pork center</h1>
+</header>
+
+<nav>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('about')">About</a>
+    <a onclick="showPage('menu')">Menu</a>
+    <a onclick="showPage('cart')">Cart</a>
+    <a onclick="showPage('contact')">Contact</a>
+    <a onclick="showPage('help')">Help</a>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="active"
+    style="
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)),
+            url("boss/boss.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: rgb(255, 255, 255);
+        padding: 50px 30px;
+        border-radius: 12px;
+    ">
+
+    <h2 style="
+        text-align: center;
+        font-size: 36px;
+        color: #ffcc00;
+        margin-bottom: 15px;
+    ">
+        Welcome to Gandimuggwe Bar & Pork Center
+    </h2>
+
+    <p style="
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.6;
+    ">
+        Fresh pork. Great taste. Trusted service.<br>
+        Experience the best pork in town with us.
+    </p>
+
+    <h3 style="color: #ff558e; margin-top: 30px;">How to Order</h3>
+
+    <div class="order-box" style="
+        background: rgba(255,255,255,0.1);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 15px;
+    ">
+        <p>
+            📞 For faster service, we recommend calling to place your order.
+            This website helps you view our products and prices before contacting us.
+        </p>
+        <p>
+            💬 Orders are also received online, especially on <strong>WhatsApp</strong>.
+        </p>
+        <p>
+            🛒 The <strong>Cart</strong> shows everything you select from the menu and
+            helps you know the total amount to pay.
+        </p>
+    </div>
+
+    <h3 style="color: #85ff55; margin-top: 30px;">
+        Our Branches & Order Contacts
+    </h3>
+
+    <ul style="font-size: 17px; line-height: 1.7;">
+        <li>📍 Lungujja Community — 0766 142306 (Patrick)</li>
+        <li>📍 Kibumbiro – Nabisasiro — 0766642733 / 0705780741 (Nicholas / Peace)</li>
+        <li>📍 Excell Pork Center – Kiyembe Kitunzi — 0708719498 / 0750160895 (Bonny / Evarist)</li>
+        <li>📍 Bulwa – Rubaga — 0701516908 (Joseph)</li>
+        <li>📍 Gayaza — 0755435020 (Ssenga)</li>
+        <li>Busega --Kasumba grounds--use contact on contact page</li>
+    </ul>
+    <img src="gand.jpeg" width="120" alt="the MD Gandimuggwe">
+
+</section>
+
+<!-- ABOUT -->
+<section id="about"
+    style="
+        background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url('boss.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+    ">
+
+    <h2 style="color:#ffd700; text-align:center;">About Us</h2>
+
+    <p>
+        We provide fresh, tasty, and affordable pork products with excellent customer service.
+    </p>
+
+    <p>
+        Our pork is available fried, roasted, cooked in soup, including ears, liver, and legs (morocon).
+    </p>
+
+    <p>
+        we also have the best bar and more other sevices
+    </p>
+
+</section>
+<section id="menu"
+    style="
+        background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url('boss.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 30px;
+        border-radius: 15px;
+        color: white;
+    ">
+
+    <h2 style="text-align:center; color:#ffd700;">
+        Menu
+    </h2>
+
+    <div class="card" style="background: rgba(255,255,255,0.15); color: white;">
+        <h3>Pork Stick roasted– UGX 5,000</h3>
+        <button onclick="addToCart('Pork Stick', 5000)">Add to Cart</button>
+    </div>
+
+    <div class="card" style="background: rgba(255,255,255,0.15); color: white;">
+        <h3>Pork Ribs roasted – UGX 10,000</h3>
+        <button onclick="addToCart('Pork Ribs', 10000)">Add to Cart</button>
+    </div>
+
+    <div class="card" style="background: rgba(255,255,255,0.15); color: white;">
+        <h3>Cachumbali – From UGX 1,000</h3>
+        <button onclick="addToCart('Cachumbali', 1000)">Add to Cart</button>
+    </div>
+
+    <div class="card" style="background: rgba(255,255,255,0.15); color: white;">
+        <h3>Pork Ears roasted ones and fried(1 Piece) – UGX 5,000</h3>
+        <button onclick="addToCart('Pork Ears (1 Piece)', 5000)">Add to Cart</button>
+    </div>
+
+    <div class="card" style="background: rgba(255,255,255,0.15); color: white;">
+        <h3>Pork Liver – From UGX 1,000 and above</h3>
+        <button onclick="addToCart('Pork Liver', 1000)">Add to Cart</button>
+    </div>
+    <div class="card" style="background: rgba(255,255,255,0.15); color: white;">
+        <h3>fried Pork –half UGX 11,000 </h3>
+        <button onclick="addToCart('fried half killo', 11000)">Add to Cart</button>
+    </div>
+    <div class="card" style="background: rgba(255,255,255,0.15); color: white;">
+        <h3>fried Pork –kilo UGX 22,000 </h3>
+        <button onclick="addToCart('fried killo', 22000)">Add to Cart</button>
+    </div>
+
+    <div class="card" style="background: rgba(255,255,255,0.15); color: white;">
+        <h3>Fresh Quarter – UGX 4,000</h3>
+        <button onclick="addToCart('Fresh Quarter', 4000)">Add to Cart</button>
+    </div>
+
+    <div class="card" style="background: rgba(255,255,255,0.15); color: white;">
+        <h3>Fresh Half – UGX 8,000</h3>
+        <button onclick="addToCart('Fresh Half', 8000)">Add to Cart</button>
+    </div>
+
+    <div class="card" style="background: rgba(255,255,255,0.15); color: white;">
+        <h3>Fresh Kilo – UGX 16,000</h3>
+        <button onclick="addToCart('Fresh Kilo', 16000)">Add to Cart</button>
+    </div>
+
+</section>
+<!-- CART -->
+<section id="cart"
+    style="
+        background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url('boss.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+    ">
+
+    <h2 style="color:#ffd700; text-align:center;">
+        Your Cart
+    </h2>
+
+    <div class="card" style="background: rgba(255,255,255,0.15); color:white;">
+        <ul id="cartItems"></ul>
+
+        <h3 id="total">Total: UGX 0</h3>
+
+        <button onclick="checkout()">Checkout</button>
+        <button onclick="clearCart()">Clear Cart</button>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact"
+    style="
+        background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url('boss.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+    ">
+
+    <h2 style="color:#ffd700; text-align:center;">Contact Us</h2>
+
+    <p>📞 <a href="tel:+256770123456" style="color:white;">Call Us</a></p>
+    <p>📧 <a href="mailto:nicholaskabega84@gmail.com" style="color:white;">Email Us</a></p>
+
+    <h3>Quick Message</h3>
+
+    <form action="mailto:nicholaskabega84@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required><br><br>
+
+        <input type="email" name="email" placeholder="Your Email" required><br><br>
+
+        <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <h3>Social Media</h3>
+
+    <p>
+        <a href="https://wa.me/256702214774?text=Hello%20I%20want%20to%20order"
+           target="_blank"
+           style="color:white;">
+           WhatsApp
+        </a>
+    </p>
+
+    <p>
+        <a href="https://facebook.com/kabeganicholas"
+           target="_blank"
+           style="color:white;">
+           Facebook
+        </a>
+    </p>
+
+</section>
+
+<!-- HELP -->
+<section id="help">
+    <h2>Help – How to Order</h2>
+
+    <div class="card">
+        <h3>Step 1: Browse the Website</h3>
+        <p>Use the menu at the top to move between pages.</p>
+    </div>
+
+    <div class="card">
+        <h3>Step 2: View the Menu</h3>
+        <p>Click on Menu to see available pork products and prices.</p>
+    </div>
+
+    <div class="card">
+        <h3>Step 3: Add Items</h3>
+        <p>Click Add to Cart under the food you want to order.</p>
+    </div>
+
+    <div class="card">
+        <h3>Step 4: Review Cart</h3>
+        <p>Open the Cart to see your selected items and total cost.</p>
+    </div>
+
+    <div class="card">
+        <h3>Step 5: Checkout</h3>
+        <p>Click Checkout to place your order. We will contact you.</p>
+    </div>
+
+    <div class="card">
+        <h3>Need Help?</h3>
+        <p>Visit the Contact page to call, email, or WhatsApp us.</p>
+    </div>
+</section>
+
+<script>
+function showPage(id) {
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+    if (id === 'cart') displayCart();
+}
+
+function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ name, price });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(name + " added to cart");
+}
+
+function displayCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let list = document.getElementById('cartItems');
+    let total = 0;
+    list.innerHTML = "";
+
+    cart.forEach(item => {
+        let li = document.createElement('li');
+        li.textContent = item.name + " - UGX " + item.price;
+        list.appendChild(li);
+        total += item.price;
+    });
+
+    document.getElementById('total').innerText = "Total: UGX " + total;
+}
+
+function checkout() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+    alert("Order placed successfully!");
+    localStorage.removeItem('cart');
+    displayCart();
+}
+
+function clearCart() {
+    localStorage.removeItem('cart');
+    displayCart();
+}
+</script>
+
+</body>
+</html>
